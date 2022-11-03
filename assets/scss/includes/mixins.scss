@@ -1,5 +1,6 @@
 $ip: 365px;
 $iph: 375px;
+$small: 450px;
 $sm: 576px;
 $col: 610px;
 $md: 768px;
@@ -9,6 +10,7 @@ $xl: 1200px;
 $xlmidle: 1300px;
 $xxl: 1440px;
 $xxxl: 1570px;
+$xxxxl: 1650px;
 
 
 @mixin landscape {
@@ -34,6 +36,11 @@ $xxxl: 1570px;
   }
 }
 
+@mixin small {
+  @media (min-width: #{$small}) {
+    @content;
+  }
+}
 @mixin sm {
   @media (min-width: #{$sm}) {
     @content;
@@ -85,6 +92,11 @@ $xxxl: 1570px;
     @content;
   }
 }
+@mixin xxxxl {
+  @media (min-width: #{$xxxxl}) {
+    @content;
+  }
+}
 
 @mixin max-ip {
   @media (max-width: #{$ip}) {
@@ -97,6 +109,11 @@ $xxxl: 1570px;
   }
 }
 
+@mixin max-small {
+  @media (max-width: #{$small}) {
+    @content;
+  }
+}
 @mixin max-sm {
   @media (max-width: #{$sm}) {
     @content;
@@ -144,6 +161,11 @@ $xxxl: 1570px;
 }
 @mixin max-xxxl {
   @media (max-width: #{$xxxl}) {
+    @content;
+  }
+}
+@mixin max-xxxxl {
+  @media (max-width: #{$xxxxl}) {
     @content;
   }
 }

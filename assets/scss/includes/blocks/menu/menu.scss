@@ -1,0 +1,40 @@
+.menu {
+    column-gap: 11px;
+    @include max-xxxxl {
+        column-gap: 7px;
+    }
+    @include max-xxl {
+        padding: 10px 0;
+    }
+    @include max-md {
+        padding: 7px 0 8px;
+    }
+    &::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0 !important;               
+    }
+    &__item {
+        padding: 15px 20px;
+        box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        min-width: max-content;
+        @include max-xxxxl {
+            padding: 15px;
+        }
+        @include max-xxxl {
+            padding: 15px 13px;
+        }
+        @include max-md {
+            padding: 11px 17px;
+        }
+        
+    }
+    &__link {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        @include max-md {
+            font-size: 12px;
+        }
+    }
+}

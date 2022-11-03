@@ -102,7 +102,8 @@ section {
 	display: block;
 }
 body {
-	font-family: "Raleway", sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	background: #BAF5FB;
 }
 ol,
 ul {
@@ -130,14 +131,14 @@ a {
 	text-decoration: none;
 	text-transform: initial;
 	color: unset;
-	&:focus {
-		color: #C17465;
-	}
 }
 button {
 	border: none;
 	padding: 0;
 	background: none;
+}
+.category__title {
+	color: #fff !important;
 }
 .form-control {
 	padding: 0;
@@ -161,22 +162,21 @@ button {
 	transform: rotateZ(180deg);
 }
 .container {
-	max-width: 1440px;
+	max-width: 1920px;
 	margin: auto;
-	padding: 0 133px 0 135px;
-	@include max-xl {
-		padding: 0 35px;
-	}
+	padding: 0 32px;
 	@include max-md {
-		padding: 0 15px;
+		padding: 0 6px;
 	}
+}
+.dominant {
+	z-index: 5 !important;
 }
 .owl-stage-outer {
 	overflow: hidden;
 }
 .owl-stage {
 	display: flex;
-	// align-items: center;
 }
 .owl-nav {
 	display: none;
@@ -190,41 +190,9 @@ button {
 .slick-dots {
 	display: none !important;
 }
-.custom-button {
-	background: #c17465;
-	border-radius: 5px;
-	color: #fff;
-}
-.row-rewerse {
-	flex-direction: row-reverse;
-}
-.opacity0 {
-	opacity: 0;
-}
-.catalog__active {
-	margin-top: 11px !important;
-}
 ::-webkit-scrollbar {
 	width: 0px;
 	background: rgba(255, 255, 255, 0);
-}
-.sectionTitle {
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 42px;
-	color: #555555;
-	@include max-md {
-		font-size: 24px;
-		line-height: 28px;
-	}
-}
-.btn__next {
-	width: 13px;
-	position: absolute;
-	right: 30px;
-	top: 0;
-	bottom: 0;
-	margin: auto;
 }
 select {
 	-moz-appearance: none;
@@ -232,4 +200,25 @@ select {
 }
 select::-ms-expand {
 	display: none;
+}
+.pink {
+	background: #e910ac;
+}
+.rose {
+	background: #EC4EEC;
+}
+.blue {
+	background: #194ED6;
+}
+.orange {
+	background: #FF7A00;
+}
+.green {
+	background: #77EE2F;
+}
+.yellow {
+	background: #FFB800;
+}
+.violet {
+	background: #8031E4;
 }

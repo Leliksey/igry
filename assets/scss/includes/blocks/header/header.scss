@@ -1,0 +1,112 @@
+.header {
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 0 0;
+        @include max-xxl {
+            padding: 16px 0 0;
+        }
+        @include max-md {
+            flex-direction: column;
+            padding: 3px 0 0;
+        }
+    }
+    &__mobile_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        @include max-md {
+            width: 100%;
+        } 
+    }
+    &__mobile_icon {
+        width: 30px;
+        height: 30px;
+        display: none;
+        @include max-md {
+            display: block;
+        }
+    }
+    &__burger {
+        position: relative;
+        & img {
+            position: absolute;
+            z-index: 0;
+        }
+    }
+    &__logo {
+        max-width: 180px;
+        min-width: 180px;
+        max-height: 23px;
+        @include max-md {
+            max-width: 137px;
+            min-width: 137px;
+            max-height: 16px;
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        @include max-xxl {
+            display: contents;
+        }
+        @include max-md {
+            display: flex;
+        }
+    }
+    &__menu {
+        display: flex;
+        margin-left: 55px;
+        @include max-xxxxl {
+            margin-left: 25px;
+        }
+        @include max-xxxl {
+            margin-left: 15px;
+        }
+        @include max-xxl {
+            margin-left: 15px;
+            overflow: auto;
+        }
+        @include max-md {
+            margin-left: 0;
+        }
+    }
+    &__search {
+        position: relative;
+        max-width: 438px;
+        min-width: 150px;
+        width: 100%;
+        margin-left: 14px;
+        @include max-xxxl {
+            max-width: 200px;
+        }
+        @include max-md {
+            display: none;
+        }
+        & input {
+            background: #ffffff;
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+            padding: 15px 17px;
+            width: 100%;
+        }
+        & input::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 30px;
+            color: #000000;
+        }
+        & img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 11px;
+            max-width: 25px;
+            max-height: 24px;
+        }
+    }
+}

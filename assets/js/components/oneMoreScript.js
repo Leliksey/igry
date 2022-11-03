@@ -1,15 +1,10 @@
-$(".header__lang .button").click(function() {
-    $(this).parent().find(".button").removeClass("button__active");
-    $(this).addClass("button__active");
-});
 
 
 
-$(".header__burger").click(function() {
-    $(".burger__menu").addClass("active");
-});
-$(".burger__close").click(function() {
-    $(".burger__menu").removeClass("active");
+
+$(".header__mobile_icon").click(function() {
+    $(".header__mobile_icon img").toggleClass("dominant");
+    $(".category__menu").toggleClass("active");
 });
 
     
@@ -38,36 +33,6 @@ $(".burger__close").click(function() {
 // });
 
 
-$(".popular__aside-link").click(function(e) {
-    $(this).parent().parent().find(".active").removeClass("active");
-    $(this).parent().addClass("active");
-    let index = $(this).parent().index();
-    $(".popular__aside-nav").find(".active").removeClass("active");
-    $(".popular__aside-nav span").eq(index).addClass("active");
-    $(".products__popular .popular__tab-item").addClass("hide");
-    $(".popular__tab-item").eq(index).removeClass("hide");
-    e.preventDefault();
-});
-$(".popular__aside-nav span").click(function() {
-    $(this).parent().find(".active").removeClass("active");
-    $(this).addClass("active");
-    let index = $(this).index();
-    $(".popular__aside-list").find(".active").removeClass("active");
-    $(".popular__aside-item").eq(index).addClass("active");
-    $(".products__popular .popular__tab-item").addClass("hide");
-    $(".popular__tab-item").eq(index).removeClass("hide");
-});
-
-
-    $(".news__next").click(function() {
-        $(".news__content .owl-next").click();
-    });
-    $(".reviews__nav_prev").click(function() {
-        $(".reviews__list  .owl-prev").click();
-    });
-    $(".reviews__nav_next").click(function() {
-        $(".reviews__list  .owl-next").click();
-    });
 
 
     $(".categorySlider__bottom-btns img:first-child").click(function() {
@@ -78,11 +43,6 @@ $(".popular__aside-nav span").click(function() {
     });
 
 
-$(".categoryFilter__view").on("click", function() {
-    $(this).parent().find(".active").removeClass("active");
-    $(this).addClass("active");
-    
-})
 $(".categoryFilter__view:first-child").on("click", function() {
     $(".categoryFilter__result-bottom").addClass("active");
 })
