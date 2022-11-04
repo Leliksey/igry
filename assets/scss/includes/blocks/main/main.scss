@@ -16,7 +16,7 @@
     &__right {
         width: 100%;
         @include max-md {
-            display: none;
+            // display: none;
         }
     }
     &__categories {
@@ -24,9 +24,16 @@
         justify-content: space-between;
         width: 100%;
         column-gap: 20px;
+        @include max-md {
+            flex-direction: column-reverse;
+            display: none;
+        }
         & .category__item {
             max-width: 645px;
             width: 100%;
+            @include max-md {
+                max-width: 100%;
+            }
         }
         & .category__box {
             grid-template-columns: repeat(9, 1fr);
@@ -45,6 +52,12 @@
             }
             @include max-tab {
                 grid-template-columns: repeat(3, 1fr);
+            }
+            @include max-md {
+                grid-template-columns: repeat(8, 1fr);
+            }
+            @include max-sm {
+                grid-template-columns: repeat(5, 1fr);
             }
         }
         & .category__name {
@@ -82,7 +95,7 @@
             color: #2d2c2c;
         }
         &-category__top {
-            margin-top: 25px;
+            padding-top: 25px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -107,7 +120,7 @@
                     max-width: 300px;
                 }
                 @include max-xl {
-                    max-width: 200px;
+                    // max-width: 200px;
                 }
             }
         }
@@ -117,6 +130,7 @@
             grid-template-columns: repeat(7, 1fr);
             row-gap: 23px;
             justify-items: center;
+            column-gap: 19px;
             @include max-big {
                 grid-template-columns: repeat(6, 1fr);
             }
@@ -126,14 +140,19 @@
             @include max-xl {
                 grid-template-columns: repeat(4, 1fr);
             }
+            @include max-lg {
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 12px;
+                row-gap: 9px;
+            }
         }
         &-category__game {
-            max-width: 160px;
+            max-width: 100%;
             @include max-xxl {
-                max-width: 140px;
+                max-width: 100%;
             }
             @include max-lg {
-                max-width: 130px;
+                max-width: 100%;
             }
             &_name {
                 font-weight: 600;

@@ -10,9 +10,10 @@
         left: 0;
         right: 0;
         margin: auto;
-        width: 98%;
+        width: 98.5%;
         height: 92vh;
         overflow: auto;
+        z-index: 15;
         &.active {
             transform: translateX(0);
             transition: .5s;
@@ -38,9 +39,11 @@
 
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        row-gap: 10px;
+        // row-gap: 10px;
+        row-gap: 0;
         justify-items: center;
         padding: 8px 0;
+        column-gap: 10px;
         @include max-sm {
             grid-template-columns: repeat(6, 1fr);
         }
@@ -52,8 +55,8 @@
         }
         & a {
             display: block;
-            max-width: 62px;
-            max-height: 62px;
+            // max-width: 62px;
+            // max-height: 62px;
         }
         & img {
         }

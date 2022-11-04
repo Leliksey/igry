@@ -19,6 +19,7 @@
     @include max-md {
         max-width: 100%;
         row-gap: 11px;
+        display: none;
     }
     & .category__box {
         grid-template-columns: repeat(6, 1fr);
@@ -50,5 +51,18 @@
     }
     & .category__name {
         margin-bottom: 15px;
+        position: relative;
+        & img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 13px;
+            margin: auto;
+            width: 23px;
+            display: none;
+            @include max-md {
+                display: block;
+            }
+        }
     }
 }

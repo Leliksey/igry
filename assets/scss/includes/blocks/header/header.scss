@@ -49,6 +49,7 @@
     &__nav {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         width: 100%;
         @include max-xxl {
             display: contents;
