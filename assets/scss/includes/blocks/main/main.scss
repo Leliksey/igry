@@ -3,6 +3,9 @@
     @include max-lg {
         margin-top: 20px;
     }
+    @include max-md {
+        margin-top: 5px;
+    }
     &__content {
         display: flex;
         column-gap: 62px;
@@ -12,6 +15,9 @@
     }
     &__right {
         width: 100%;
+        @include max-md {
+            display: none;
+        }
     }
     &__categories {
         display: flex;
@@ -43,6 +49,149 @@
         }
         & .category__name {
             margin-bottom: 15px;
+        }
+    }
+    &__center {
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 0 63px 27px;
+        margin-top: 14px;
+        @include max-xlmidle {
+            padding: 0 30px 27px;
+            margin-top: 10px;
+        }
+        @include max-xl {
+            padding: 5px 30px 27px;
+        }
+        &-title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 48px;
+            color: #2d2c2c;
+            text-align: center;
+            @include max-xl {
+                line-height: 34px;
+            }
+        }
+        &-description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            color: #2d2c2c;
+        }
+        &-category__top {
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & img {
+                max-width: 337px;
+                max-height: 52px;
+            }
+            & .category__name {
+                max-width: 410px;
+                max-height: 61px;
+                width: 100%;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 53px;
+                display: flex;
+                justify-content: center;
+                color: #ffffff;
+                align-items: center;
+                border-radius: 15px;
+                margin: 0 15px;
+                @include max-xxxl {
+                    max-width: 300px;
+                }
+                @include max-xl {
+                    max-width: 200px;
+                }
+            }
+        }
+        &-category__games {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            row-gap: 23px;
+            justify-items: center;
+            @include max-big {
+                grid-template-columns: repeat(6, 1fr);
+            }
+            @include max-xxxxl {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            @include max-xl {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        &-category__game {
+            max-width: 160px;
+            @include max-xxl {
+                max-width: 140px;
+            }
+            @include max-lg {
+                max-width: 130px;
+            }
+            &_name {
+                font-weight: 600;
+                font-size: 10px;
+                line-height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                background: #77ee2f;
+                box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                margin-top: -10px;
+                z-index: 5;
+                position: relative;
+                @include max-lg {
+                    font-size: 9px;
+                }
+            }
+        }
+        &-bottom {
+            margin-top: 54px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-more {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 37px;
+            text-align: center;
+            color: #ffffff;
+            background: #ff0000;
+            border-radius: 7px;
+            padding: 1px 11px;
+        }
+        &-pages {
+            display: flex;
+            column-gap: 5px;
+            &__item {
+                background: #ff0000;
+                border-radius: 7px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 37px;
+                color: #ffffff;
+                width: 39px;
+                height: 39px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &.active {
+                    background: #e8e8e8;
+                    border: 2px solid #ff0000;
+                    color: #555555;
+                }
+            }
         }
     }
 }

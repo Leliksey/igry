@@ -18,6 +18,7 @@
     }
     @include max-md {
         max-width: 100%;
+        row-gap: 11px;
     }
     & .category__box {
         grid-template-columns: repeat(6, 1fr);

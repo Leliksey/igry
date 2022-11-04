@@ -7,6 +7,10 @@ $(".header__mobile_icon").click(function() {
     $(".category__menu").toggleClass("active");
     $("body").toggleClass("category__menu_open");
 });
+$(".main__center-pages__item").click(function() {
+    $(this).parent().find(".active").removeClass("active");
+    $(this).addClass("active");
+})
 
     
 ///catalog open
