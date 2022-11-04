@@ -5,6 +5,7 @@
 $(".header__mobile_icon").click(function() {
     $(".header__mobile_icon img").toggleClass("dominant");
     $(".category__menu").toggleClass("active");
+    $("body").toggleClass("category__menu_open");
 });
 
     

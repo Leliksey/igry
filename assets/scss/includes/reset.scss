@@ -88,19 +88,7 @@ video {
 	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
-}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	background: #BAF5FB;
@@ -221,4 +209,20 @@ select::-ms-expand {
 }
 .violet {
 	background: #8031E4;
+}
+.mint {
+	background: #10E9BF;
+}
+.sky {
+	background: #03CCF8;
+}
+.advertise {
+	max-width: 1223px;
+    max-height: 100px;
+    width: 100%;
+    margin: auto;
+    margin-top: 6px;
+	@include max-md {
+		display: none;
+	}
 }

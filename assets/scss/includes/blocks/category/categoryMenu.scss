@@ -1,12 +1,24 @@
 .category {
+    position: relative;
     &__menu {
         transform: translateX(-150%);
         transition: .5s;
         background: #BAF5FB;
         padding-bottom: 23px;
+        position: absolute;
+        top: 95px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 98%;
+        height: 92vh;
+        overflow: auto;
         &.active {
             transform: translateX(0);
             transition: .5s;
+        }
+        &_open {
+            overflow: hidden;
         }
     }
     &__item {

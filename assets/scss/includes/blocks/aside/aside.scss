@@ -1,0 +1,53 @@
+.aside {
+    max-width: 426px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    @include max-xxxl {
+        max-width: 300px
+    }
+    @include max-xl {
+        max-width: 250px
+    }
+    @include max-lg {
+        max-width: 200px
+    }
+    @include max-tab {
+        max-width: 155px
+    }
+    @include max-md {
+        max-width: 100%;
+    }
+    & .category__box {
+        grid-template-columns: repeat(6, 1fr);
+        padding: 0;
+        @include max-xxxl {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include max-xl {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include max-tab {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include max-md {
+            grid-template-columns: repeat(9, 1fr);
+        }
+        @include max-col {
+            grid-template-columns: repeat(7, 1fr);
+        }
+        @include max-sm {
+            grid-template-columns: repeat(6, 1fr);
+        }
+        @include max-small {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        @include max-ip {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    & .category__name {
+        margin-bottom: 15px;
+    }
+}

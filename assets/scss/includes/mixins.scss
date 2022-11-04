@@ -6,11 +6,13 @@ $col: 610px;
 $md: 768px;
 $tab: 850px;
 $lg: 992px;
+$lloo: 1100px;
 $xl: 1200px;
 $xlmidle: 1300px;
 $xxl: 1440px;
 $xxxl: 1570px;
 $xxxxl: 1650px;
+$big: 1800px;
 
 
 @mixin landscape {
@@ -71,6 +73,11 @@ $xxxxl: 1650px;
   }
 }
 
+@mixin lloo {
+  @media (min-width: #{$lloo}) {
+    @content;
+  }
+}
 @mixin xl {
   @media (min-width: #{$xl}) {
     @content;
@@ -94,6 +101,11 @@ $xxxxl: 1650px;
 }
 @mixin xxxxl {
   @media (min-width: #{$xxxxl}) {
+    @content;
+  }
+}
+@mixin big {
+  @media (min-width: #{$big}) {
     @content;
   }
 }
@@ -143,6 +155,11 @@ $xxxxl: 1650px;
     @content;
   }
 }
+@mixin max-lloo {
+  @media (max-width: #{$lloo}) {
+    @content;
+  }
+}
 
 @mixin max-xl {
   @media (max-width: #{$xl}) {
@@ -166,6 +183,11 @@ $xxxxl: 1650px;
 }
 @mixin max-xxxxl {
   @media (max-width: #{$xxxxl}) {
+    @content;
+  }
+}
+@mixin max-big {
+  @media (max-width: #{$big}) {
     @content;
   }
 }
