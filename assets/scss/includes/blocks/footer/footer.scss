@@ -1,0 +1,52 @@
+.footer {
+    width: 100%;
+    background: #194ed6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 38px;
+    margin-top: 33px;
+    &__left {
+        display: flex;
+        align-items: center;
+        & * {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+        }
+    }
+    &__logo {
+        margin-right: 10px;
+        & a {
+        }
+    }
+
+    &__current_year {
+        margin-right: 5px;
+    }
+    &__text {
+        border-left: 1px solid #fff;
+        padding-left: 5px;
+        line-height: 15px !important;
+    }
+    &__right {
+        & * {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.12em;
+            color: #fffdfd;
+        }
+    }
+    &__list {
+    }
+    &__item {
+    }
+    &__link {
+    }
+}

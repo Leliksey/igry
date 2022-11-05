@@ -24,6 +24,10 @@ $(document).ready(function() {
             $(this).parent().parent().find(".main__center-category__games").toggleClass("close");
             $(this).parent().parent().find(".main__center-category__game:nth-child(n+4)").slideToggle();
         })
+    } else if ($(window).width() > 768) {
+        $(".main__center").last().removeClass("close");
+        $(".main__center").last().find(".category__name").removeClass("close");
+        $(".main__center").last().find("picture").removeClass("hide");
     }
 })
 
