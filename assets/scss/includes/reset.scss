@@ -226,3 +226,17 @@ select::-ms-expand {
 		display: none;
 	}
 }
+#toTop {
+	position: fixed;
+	bottom: 40px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+	z-index: 10;
+	@include max-md {
+		bottom: 13px;
+		right: 5px;
+		width: 26px;
+		height: 26px;
+	}
+}

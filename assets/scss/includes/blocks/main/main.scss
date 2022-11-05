@@ -91,7 +91,7 @@
         }
         @include max-md {
             margin-top: 0;
-            padding: 25px 9px 27px;
+            padding: 25px 9px 10px;
             transition: .5s;
         }
         &-text {
@@ -210,6 +210,9 @@
             @include max-lg {
                 margin-top: 12px;
             }
+            @include max-ip {
+                column-gap: 5px;
+            }
             // &.open .main__center-category__game:nth-child(n+4) {
             //     display: none !important;
             // }
@@ -243,6 +246,15 @@
                 position: relative;
                 @include max-lg {
                     font-size: 9px;
+                }
+                @include max-sm {
+                    line-height: 21px;
+                }
+                @include max-small {
+                    font-size: 8px;
+                }
+                @include max-ip {
+                    font-size: 7px;
                 }
             }
         }
@@ -306,5 +318,17 @@
     display:flex!important;
     @include max-md {
         display: block !important;
+    }
+  }
+  .main__center:last-child {
+    @include max-md {
+        padding-bottom: 23px;
+    }
+  }
+  .adv {
+    display: none;
+    @include max-md {
+        display: block;
+        margin-top: 12px;
     }
   }

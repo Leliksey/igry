@@ -6,6 +6,11 @@
     align-items: center;
     padding: 11px 38px;
     margin-top: 33px;
+    @include max-md {
+        justify-content: start;
+        padding: 4px;
+        margin-top: 0;
+    }
     &__left {
         display: flex;
         align-items: center;
@@ -13,9 +18,10 @@
             font-weight: 400;
             font-size: 12px;
             line-height: 15px;
-            display: flex;
-            align-items: center;
             color: #ffffff;
+            @include max-lg {
+                font-size: 10px;
+            }
         }
     }
     &__logo {
@@ -31,22 +37,41 @@
         border-left: 1px solid #fff;
         padding-left: 5px;
         line-height: 15px !important;
+        
     }
     &__right {
-        & * {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 18px;
-            display: flex;
-            align-items: center;
-            letter-spacing: 0.12em;
-            color: #fffdfd;
+        @include max-md {
+            display: none;
         }
     }
     &__list {
+        display: flex;
+        align-items: center;
     }
     &__item {
+        padding: 0 5px;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        &:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+        &:last-child {
+            padding-right: 0;
+            border-right: none;
+        }
     }
     &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.12em;
+        color: #fffdfd;
+        @include max-lg {
+            font-size: 12px;
+        }
+        @include max-sm {
+            font-size: 10px;
+        }
     }
 }
