@@ -1,0 +1,71 @@
+.popular {
+    &__content {
+        background: #fff;
+        padding: 21px 43px 56px;
+        margin-top: 27px;
+        border-radius: 30px;
+        @include max-lg {
+            padding: 21px 43px 36px;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 53px;
+        color: #2c2c2c;
+        text-align: center;
+        @include max-lg {
+            font-size: 30px;
+        }
+    }
+    &__bottom {
+        position: relative;
+        margin: 47px auto 0;
+        @include max-lg {
+            margin: 30px auto 0;
+        }
+    }
+    &__slider {
+        display: flex;
+        max-width: 1663px;
+        max-width: 90%;
+        margin: auto;
+        & .owl-stage-outer {
+            padding-bottom: 10px;
+        }
+        
+    }
+    & .main__center-category__game {
+        max-width: 160px;
+        & img {
+        }
+        & .main__center-category__game_name {
+        }
+    }
+    &__slider-nav {
+        position: absolute;
+        width: 100%;
+        height: max-content;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        & img {
+            width: 30px;
+        }
+        & img:first-child {
+            margin-left: -10px;
+            @include max-lg {
+                margin-left: -15px;
+            }
+        }
+        & img:last-child {
+            transform: rotateZ(180deg);
+            margin-right: -10px;
+            @include max-lg {
+                margin-right: -15px;
+            }
+        }
+    }
+}
