@@ -28,6 +28,14 @@
             flex-direction: column-reverse;
             display: none;
         }
+        &-list {
+            @include max-md {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+            }
+            
+        }
         & .category__item {
             max-width: 645px;
             width: 100%;
@@ -69,12 +77,34 @@
         border-radius: 15px;
         padding: 0 63px 27px;
         margin-top: 14px;
+        &.close {
+            background: none !important;
+            padding: 0 !important;
+        }
         @include max-xlmidle {
             padding: 0 30px 27px;
             margin-top: 10px;
         }
         @include max-xl {
             padding: 5px 30px 27px;
+        }
+        @include max-md {
+            margin-top: 0;
+            padding: 25px 9px 27px;
+            transition: .5s;
+        }
+        &-text {
+            display: block;
+            @include max-md {
+                display: none;
+            }
+        }
+        &-text_mobile {
+            margin-top: 13px;
+            display: none;
+            // @include max-md {
+            //     display: block;
+            // }
         }
         &-title {
             font-style: normal;
@@ -86,6 +116,10 @@
             @include max-xl {
                 line-height: 34px;
             }
+            @include max-sm {
+                font-size: 14px;
+                line-height: 18px;
+            }
         }
         &-description {
             font-weight: 400;
@@ -93,12 +127,19 @@
             line-height: 24px;
             text-align: center;
             color: #2d2c2c;
+            @include max-sm {
+                font-size: 12px;
+                line-height: 17px;
+            }
         }
         &-category__top {
             padding-top: 25px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include max-md {
+                padding-top: 0;
+            }
             & img {
                 max-width: 337px;
                 max-height: 52px;
@@ -116,11 +157,27 @@
                 align-items: center;
                 border-radius: 15px;
                 margin: 0 15px;
+                position: relative;
                 @include max-xxxl {
                     max-width: 300px;
                 }
-                @include max-xl {
-                    // max-width: 200px;
+                @include max-sm {
+                    font-size: 14px;
+                    line-height: 25px;
+                    font-weight: 600;
+                }
+                
+                & img {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 13px;
+                    margin: auto;
+                    width: 23px;
+                    display: none;
+                }
+                &.close img {
+                    display: block;
                 }
             }
         }
@@ -145,6 +202,12 @@
                 column-gap: 12px;
                 row-gap: 9px;
             }
+            @include max-lg {
+                margin-top: 12px;
+            }
+            // &.open .main__center-category__game:nth-child(n+4) {
+            //     display: none !important;
+            // }
         }
         &-category__game {
             max-width: 100%;
@@ -153,6 +216,9 @@
             }
             @include max-lg {
                 max-width: 100%;
+            }
+            &:nth-child(n+4) {
+                display: none;
             }
             &_name {
                 font-weight: 600;
@@ -175,9 +241,12 @@
         }
         &-bottom {
             margin-top: 54px;
-            display: flex;
+            display: none;
             justify-content: space-between;
             align-items: center;
+            @include max-md {
+                margin-top: 31px;
+            }
         }
         &-more {
             font-weight: 400;
@@ -192,6 +261,9 @@
         &-pages {
             display: flex;
             column-gap: 5px;
+            @include max-md {
+                margin-top: 13px;
+            }
             &__item {
                 background: #ff0000;
                 border-radius: 7px;
@@ -212,5 +284,14 @@
                 }
             }
         }
+    }
+}
+.main__center:nth-child(3) .main__center-category__game:nth-child(n+4) {
+    display: block;
+}
+.main__center:nth-child(1),
+.main__center:nth-child(2) {
+    @include md {
+        display: none;
     }
 }

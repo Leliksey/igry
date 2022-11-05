@@ -12,7 +12,22 @@ $(".main__center-pages__item").click(function() {
     $(this).addClass("active");
 })
 
-    
+$(document).ready(function() {
+    if ($(window).width() < 768) {
+        $(".main__center .category__name").click(function() { 
+            $(this).prev().toggleClass("hide");
+            $(this).next().toggleClass("hide");
+            $(this).toggleClass("close");
+            $(this).parent().parent().parent().toggleClass("close");
+            $(this).parent().parent().find(".main__center-text").slideToggle();
+            $(this).parent().parent().parent().find(".main__center-bottom").slideToggle();
+            $(this).parent().parent().find(".main__center-category__games").toggleClass("close");
+            $(this).parent().parent().find(".main__center-category__game:nth-child(n+4)").slideToggle();
+        })
+    }
+})
+
+
 ///catalog open
 // let catalog = document.querySelector('.header-bottom__custom-button');
 // let menu = document.querySelector('.header-bottom__catalog');

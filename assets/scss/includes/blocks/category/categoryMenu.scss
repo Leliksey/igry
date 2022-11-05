@@ -32,8 +32,11 @@
         font-weight: 600;
         font-size: 14px;
         line-height: 15px;
-
         text-align: center;
+        &.close {
+            max-width: 100% !important;
+            margin: 0 !important;
+        }
     }
     &__box {
 
