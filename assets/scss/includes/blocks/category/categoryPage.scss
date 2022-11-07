@@ -1,0 +1,90 @@
+.categoryPage {
+    background-image: url(../images/bg_mosaic.png);
+    background-size: cover;
+    &__content {
+        display: flex;
+        column-gap: 57px;
+        margin-top: 26px;
+    }
+    & aside {
+        min-width: 427px;
+    }
+    &__right {
+        
+        & .category__slider {
+            position: relative;
+            max-width: 1234px;
+            margin: auto;
+            margin-top: 39px;
+            & .owl-stage-outer {
+                padding-bottom: 10px;
+            }
+        }
+        & .category__slider-items {
+            display: flex;
+            
+        }
+        & .category__slider-nav {
+            position: absolute;
+            width: 100%;
+            height: max-content;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            & img {
+                width: 30px;
+            }
+            & img:first-child {
+                margin-left: -50px;
+                @include max-lg {
+                    margin-left: -15px;
+                }
+            }
+            & img:last-child {
+                transform: rotateZ(180deg);
+                margin-right: -50px;
+                @include max-lg {
+                    margin-right: -15px;
+                }
+            }
+        }
+    }
+    &advertise {
+    }
+    &__center {
+        background: #ffffff;
+        border-radius: 15px;
+        padding: 20px 50px;
+        margin-top: 30px;
+        &-description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            color: #2d2c2c;
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 53px;
+            text-align: center;
+            color: #000000;
+            margin-top: 37px;
+        }
+        
+    }
+
+    & .main__center-category__top {
+    }
+    & .main__center-category__game {
+        max-width: 160px;
+    }
+    & .filter {
+        margin-top: 45px;
+    }
+    & .main__center-category__games {
+        margin-top: 23px;
+    }
+}

@@ -35,6 +35,43 @@ $(".popular__slider-nav img:last-child").on("click", ()=> {
     $(".popular__slider .owl-next").click();
 });
 
+$('.category__slider-items').owlCarousel({
+    loop:true,
+    nav:true,
+    margin:19,
+    mouseDrag:true,
+    touchDrag: true,
+    pullDrag:false,
+    freeDrag:false,
+    URLhashListener:false,
+    dots:true,
+    autoplay:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        680:{
+            items:3
+        },
+        
+        992:{
+            items:4
+        },
+        1300:{
+            items:5
+        },
+        1610:{
+            items:7
+        }
+    }
+});
+$(".category__slider-nav img:first-child").on("click", ()=> {
+    $(".category__slider .owl-prev").click();
+});
+$(".category__slider-nav img:last-child").on("click", ()=> {
+    $(".category__slider .owl-next").click();
+});
+
 
 
 

@@ -1,4 +1,9 @@
 .popular {
+    background-image: url(../images/bg_mosaic.png);
+    background-size: cover;
+    @include max-md {
+        display: none;
+    }
     &__content {
         background: #fff;
         padding: 21px 43px 56px;
