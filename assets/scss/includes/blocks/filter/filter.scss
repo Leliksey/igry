@@ -13,6 +13,12 @@
             justify-content: center;
             min-width: 216px;
             margin-right: 14px;
+            @include max-xlmidle {
+                min-width: 150px;
+            }
+            @include max-lg {
+                display: none;
+            }
         }
     }
 
@@ -22,6 +28,9 @@
         height: 100%;
         min-height: 41px;
         overflow: hidden;
+        @include max-lg {
+            display: none;
+        }
         & span {
             position: absolute;
             top: 0;
@@ -36,6 +45,13 @@
     &__nav {
         display: flex;
         align-items: center;
+        @include max-lg {
+            width: 100%;
+            justify-content: space-between;
+        }
+        @include max-md {
+            padding: 0 10px;
+        }
         & span {
             font-weight: 600;
             font-size: 16px;
@@ -44,12 +60,28 @@
             margin-right: 31px;
             min-width: 150px;
             margin-left: 38px;
+            @include max-xl {
+                margin-right: 15px;
+                min-width: 140px;
+                margin-left: 15px;
+            }
+            @include max-lg {
+                margin-left: 0;
+                min-width: auto;
+                line-height: initial;
+            }
+            @include max-sm {
+                font-size: 10px;
+            }
         }
     }
 
     &__tabs {
         display: flex;
         column-gap: 11px;
+        @include max-xl {
+            column-gap: 5px;
+        }
     }
     &__tab {
         font-weight: 600;
@@ -63,6 +95,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include max-md {
+
+        }
+        @include max-sm {
+            font-size: 12px;
+            min-width: max-content;
+            max-height: 22px;
+            padding: 13px 20px;
+        }
+        @include max-ip {
+            padding: 13px 12px;
+        }
         &:nth-child(1) {
             background: #D52828;
         }

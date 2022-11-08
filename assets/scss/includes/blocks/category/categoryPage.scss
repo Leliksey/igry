@@ -5,24 +5,71 @@
         display: flex;
         column-gap: 57px;
         margin-top: 26px;
+        @include max-xxl {
+            column-gap: 30px;
+        }
+        @include max-xl {
+            column-gap: 20px;
+        }
+        @include max-lg {
+            margin-top: 15px;
+        }
     }
     & aside {
-        min-width: 427px;
+        min-width: 250px;
+        @include max-xl {
+            max-width: 230px;
+            min-width: 230px;
+        }
+        @include max-lg {
+            max-width: 230px;
+            min-width: 150px;
+        }
     }
     &__right {
         
         & .category__slider {
             position: relative;
-            max-width: 1234px;
-            margin: auto;
-            margin-top: 39px;
+            max-width: 66vw;
+            margin: 39px auto 0;
+            @include max-xlmidle {
+                max-width: 62vw;
+            }
+            @include max-xl {
+                max-width: 65vw;
+            }
+            @include max-lloo {
+                max-width: 55vw;
+            }
+            @include max-lg {
+                margin: 20px auto 0;
+            }
+            @include max-md {
+                max-width: 80vw;
+                margin: 10px auto 0;
+            }
+            @include max-ip {
+                max-width: 78vw;
+            }
             & .owl-stage-outer {
                 padding-bottom: 10px;
+            }
+            & .owl-stage {
+                justify-content: space-between;
+            }
+            & .owl-item {
+                @include max-xlmidle {
+                    // max-width: 120px;
+                }
+            }
+            & .owl-item.active {
+                display: flex;
+                justify-content: center;
             }
         }
         & .category__slider-items {
             display: flex;
-            
+            // max-width: 67vw;
         }
         & .category__slider-nav {
             position: absolute;
@@ -35,35 +82,77 @@
             justify-content: space-between;
             & img {
                 width: 30px;
+                @include max-md {
+                    width: 25px;
+                }
+                @include max-sm {
+                    width: 15px;
+                }
             }
             & img:first-child {
-                margin-left: -50px;
+                margin-left: -40px;
+                @include max-lloo {
+                    margin-left: -55px;
+                }
                 @include max-lg {
-                    margin-left: -15px;
+                    margin-left: -45px;
+                }
+                @include max-md {
+                    margin-left: -40px;
+                }
+                @include max-sm {
+                    margin-left: -30px;
+                }
+                @include max-iph {
+                    margin-left: -25px;
                 }
             }
             & img:last-child {
                 transform: rotateZ(180deg);
-                margin-right: -50px;
+                margin-right: -40px;
+                @include max-lloo {
+                    margin-right: -55px;
+                }
                 @include max-lg {
-                    margin-right: -15px;
+                    margin-right: -45px;
+                }
+                @include max-md {
+                    margin-right: -40px;
+                }
+                @include max-sm {
+                    margin-right: -30px;
+                }
+                @include max-iph {
+                    margin-right: -25px;
                 }
             }
         }
     }
-    &advertise {
+    & .advertise {
+        margin-top: 0;
     }
     &__center {
         background: #ffffff;
         border-radius: 15px;
         padding: 20px 50px;
         margin-top: 30px;
+        @include max-lg {
+            padding: 15px 30px;
+            margin-top: 15px;
+        }
+        @include max-sm {
+            padding: 10px 8px;
+            margin-top: 15px;
+        }
         &-description {
             font-weight: 400;
             font-size: 14px;
             line-height: 24px;
             text-align: center;
             color: #2d2c2c;
+            @include max-lg {
+                font-size: 13px;
+            }
         }
         &-title {
             font-weight: 600;
@@ -72,6 +161,17 @@
             text-align: center;
             color: #000000;
             margin-top: 37px;
+            @include max-lg {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+            @include max-md {
+                margin-top: 17px;
+                line-height: initial;
+            }
+            @include max-sm {
+                margin-top: 12px;
+            }
         }
         
     }
@@ -79,12 +179,39 @@
     & .main__center-category__top {
     }
     & .main__center-category__game {
-        max-width: 160px;
+        // max-width: 160px;
+        width: 100%;
+        &:nth-child(n+4) {
+            display: block !important;
+        }
+        @include max-md {
+            max-width: 100%;
+        }
     }
     & .filter {
         margin-top: 45px;
+        @include max-lg {
+            margin-top: 30px;
+        }
+        @include max-md {
+            margin-top: 21px;
+        }
+    }
+    & .rating {
+        @include max-md {
+            margin-top: 15px;
+        }
+        @include max-sm {
+            margin-top: 10px;
+        }
     }
     & .main__center-category__games {
         margin-top: 23px;
+        @include max-sm {
+            margin-top: 17px;
+        }
+        @include max-sm {
+            margin-top: 12px;
+        }
     }
 }
