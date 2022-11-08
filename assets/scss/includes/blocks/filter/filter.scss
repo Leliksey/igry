@@ -21,7 +21,11 @@
             }
         }
     }
-
+    & .main__center-bottom {
+        @include max-md {
+            display: none !important;
+        }
+    }
     &__line {
         position: relative;
         width: 100%;
@@ -95,8 +99,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @include max-md {
-
+        
+        @include max-xl {
+            min-width: max-content;
+            padding: 13px 15px;
         }
         @include max-sm {
             font-size: 12px;

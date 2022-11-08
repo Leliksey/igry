@@ -35,9 +35,9 @@
             @include max-xlmidle {
                 max-width: 62vw;
             }
-            @include max-xl {
-                max-width: 65vw;
-            }
+            // @include max-xl {
+            //     max-width: 65vw;
+            // }
             @include max-lloo {
                 max-width: 55vw;
             }
@@ -45,7 +45,7 @@
                 margin: 20px auto 0;
             }
             @include max-md {
-                max-width: 80vw;
+                max-width: 85vw;
                 margin: 10px auto 0;
             }
             @include max-ip {
@@ -101,7 +101,7 @@
                     margin-left: -40px;
                 }
                 @include max-sm {
-                    margin-left: -30px;
+                    margin-left: -25px;
                 }
                 @include max-iph {
                     margin-left: -25px;
@@ -120,7 +120,7 @@
                     margin-right: -40px;
                 }
                 @include max-sm {
-                    margin-right: -30px;
+                    margin-right: -25px;
                 }
                 @include max-iph {
                     margin-right: -25px;
@@ -130,6 +130,15 @@
     }
     & .advertise {
         margin-top: 0;
+        max-width: 1333px;
+    }
+    & .advertises {
+        display: none;
+        @include max-md {
+            display: flex;
+            flex-direction: column;
+            margin-top: 11px;
+        }
     }
     &__center {
         background: #ffffff;
@@ -174,9 +183,18 @@
             }
         }
         
+        
     }
-
     & .main__center-category__top {
+        @include max-md {
+            margin-top: 20px;
+        }
+    }
+    & .main__center-category__top .category__name {
+        @include max-lg {
+            font-size: 18px;
+            max-width: 240px;
+        }
     }
     & .main__center-category__game {
         // max-width: 160px;

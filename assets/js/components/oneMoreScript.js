@@ -2,10 +2,13 @@
 
 
 
-$(".header__mobile_icon").click(function() {
+$(".header__burger").click(function() {
     $(".header__mobile_icon img").toggleClass("dominant");
     $(".category__menu").toggleClass("active");
     $("body").toggleClass("category__menu_open");
+});
+$(".header__mobile_search").click(function() {
+    $("body").toggleClass("popup__search_open");
 });
 $(".main__center-pages__item").click(function() {
     $(this).parent().find(".active").removeClass("active");

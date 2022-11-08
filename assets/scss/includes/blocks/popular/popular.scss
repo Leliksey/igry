@@ -61,14 +61,14 @@
             cursor: pointer;
         }
         & img:first-child {
-            margin-left: -10px;
+            margin-left: 0;
             @include max-lg {
                 margin-left: -15px;
             }
         }
         & img:last-child {
             transform: rotateZ(180deg);
-            margin-right: -10px;
+            margin-right: 0;
             @include max-lg {
                 margin-right: -15px;
             }
