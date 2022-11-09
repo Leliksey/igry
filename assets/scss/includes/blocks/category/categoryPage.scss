@@ -1,6 +1,10 @@
 .categoryPage {
     background-image: url(../images/bg_mosaic.png);
-    background-size: cover;
+    background-size: contain;
+    // height: 100vh;
+    &.active {
+        height: 100vh;
+    }
     &__content {
         display: flex;
         column-gap: 57px;
@@ -13,6 +17,9 @@
         }
         @include max-lg {
             margin-top: 15px;
+        }
+        @include max-md {
+            margin-top: 0;
         }
     }
     & aside {
@@ -27,7 +34,6 @@
         }
     }
     &__right {
-        
         & .category__slider {
             position: relative;
             max-width: 66vw;
@@ -145,13 +151,98 @@
         border-radius: 15px;
         padding: 20px 50px;
         margin-top: 30px;
+        &:not(:last-child) {
+            @include md {
+                display: none;
+            }
+        }
+        & .categoryPage__center_mobile_wrapper {
+            @include max-md {
+                padding: 0 10px;
+            }
+            
+        }
+        &.close {
+            background: none;
+            transition: 0.5s;
+            width: 98vw;
+            padding: 0;
+            @include max-sm {
+                width: 97.5vw;
+            }
+            & .categoryPage__center-description_mobile {
+                display: none;
+            }
+            & .categoryPage__center-title {
+                display: none;
+            }
+            & .category__slider {
+                display: none;
+            }
+            & .filter__nav {
+                display: none;
+            }
+            & .main__center-category__games {
+                grid-template-columns: repeat(5, 1fr);
+                column-gap: 5px;
+                @include max-ip {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+            & .main__center-category__game_name {
+                display: none;
+            }
+            & .main__center-category__game img {
+                height: 100%;
+                border: 2px solid #ff0000;
+                border-radius: 7px;
+            }
+            & .filter {
+                margin-top: 5px;
+            }
+            & .category__name {
+                padding: 5px;
+            }
+            & .main__center-category__game:nth-child(n + 6) {
+                display: none !important;
+            }
+            & .main__center-category__games {
+                margin-top: 0;
+            }
+            & .rating {
+                display: none;
+            }
+            & .advertises {
+                display: none;
+            }
+            & .comment {
+                display: none;
+            }
+            & .ukr {
+                width: 0 !important;
+                opacity: 0;
+            }
+            & .brg {
+                display: block !important;
+            }
+            & .categoryPage__center_mobile_wrapper {
+                // display: none;
+                padding: 0 10px !important;
+            }
+        }
         @include max-lg {
             padding: 15px 30px;
             margin-top: 15px;
         }
-        @include max-sm {
-            padding: 10px 8px;
+        @include max-md {
+            padding: 0;
             margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        @include max-sm {
+            //padding: 10px 8px;
+            padding: 0;
+            margin-top: 5px;
         }
         &-description {
             font-weight: 400;
@@ -161,6 +252,16 @@
             color: #2d2c2c;
             @include max-lg {
                 font-size: 13px;
+            }
+            @include max-md {
+                display: none;
+            }
+            &_mobile {
+                display: none;
+                @include max-md {
+                    display: block;
+                    margin-top: 8px;
+                }
             }
         }
         &-title {
@@ -182,12 +283,18 @@
                 margin-top: 12px;
             }
         }
-        
-        
     }
     & .main__center-category__top {
         @include max-md {
             margin-top: 20px;
+        }
+        @include max-sm {
+            margin-top: 10px;
+        }
+        & picture {
+            @include max-md {
+                display: none;
+            }
         }
     }
     & .main__center-category__top .category__name {
@@ -195,16 +302,39 @@
             font-size: 18px;
             max-width: 240px;
         }
+        @include max-md {
+            font-size: 14px;
+            max-width: 100%;
+            margin: 0;
+            padding: 7px;
+        }
+        & .ukr {
+            display: none;
+            @include max-md {
+                display: block !important;
+                position: relative !important;
+                right: 0;
+                max-width: 81px;
+                width: 100%;
+                height: 24px;
+            }
+        }
     }
     & .main__center-category__game {
         // max-width: 160px;
         width: 100%;
-        &:nth-child(n+4) {
-            display: block !important;
-        }
+        
         @include max-md {
             max-width: 100%;
+            &:nth-child(n + 4) {
+                display: block !important;
+            }
         }
+        // @include max-ip {
+        //     &:nth-child(n + 2) {
+        //         display: block !important;
+        //     }
+        // }
     }
     & .filter {
         margin-top: 45px;

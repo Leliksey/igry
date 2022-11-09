@@ -1,36 +1,244 @@
 .popup {
+  z-index: 15;
+  //search
+  &__search {
+    width: 90% !important;
+    padding: 20px;
     position: fixed;
-    top: 0;
-    bottom: 0;
+    transform: translateY(-100%);
     left: 0;
+    top: 0;
     right: 0;
     margin: auto;
     width: max-content;
     height: max-content;
     z-index: 60;
-    border-radius: 40px;
-  }
-  @media (max-width: 768px) {
-    .popup {
-      max-width: 95%;
+    border-radius: 10px;
+    transition: 0.5s;
+    &.active {
+      transform: translateY(0);
+      top: 40px;
+      transition: 0.5s;
+    }
+    & input {
+      padding: 15px 20px;
+      border: none;
+      outline: none;
+      width: 100%;
+      border-radius: 7px;
+      font-size: 20px;
     }
   }
-  @media (max-height: 809px) {
-    .popup {
-      overflow: auto;
-      height: 100%;
-    }
+  &__active {
+    overflow: hidden;
   }
-  
-  .popup-active {
-    position: absolute;
+  &__open {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: #000;
-    opacity: 0.3;
-    z-index: 50;
+    opacity: 0.5;
+    z-index: 15;
   }
-  
-  
+  //comment
+  &-comment {
+    max-width: 100%;
+    width: 92%;
+    padding: 66px 92px 231px;
+    background: #97aee9;
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: max-content;
+    transition: 0.5s;
+    @include max-xl {
+      padding: 50px 70px 100px;
+    }
+    @include max-md {
+      padding: 26px 28px 31px;
+    }
+    transform: translateY(200%);
+    &.active {
+      transform: translateY(0);
+      transition: 0.5s;
+      z-index: 20;
+    }
+    &__form {
+      & input {
+        padding: 27px 29px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #8c8888;
+        width: 100%;
+        background: #fff;
+        border-radius: 10px;
+        border: none;
+        @include max-lg {
+          padding: 20px ;
+          font-size: 17px;
+        }
+        @include max-md {
+          padding: 15px 10px;
+          font-size: 14px;
+        }
+        &::placeholder {
+          font-weight: 600;
+          font-size: 20px;
+          color: #8c8888;
+          @include max-lg {
+            font-size: 17px;
+          }
+          @include max-md {
+            font-size: 14px;
+          }
+        }
+      }
+      & textarea {
+        margin-top: 35px;
+        padding: 16px 24px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: initial;
+        color: #8c8888;
+        width: 100%;
+        background: #fff;
+        border-radius: 10px;
+        border: none;
+        min-height: 220px;
+        @include max-lg {
+          padding: 12px 20px ;
+          font-size: 17px;
+          margin-top: 25px;
+        }
+        @include max-md {
+          padding: 10px;
+          font-size: 14px;
+          margin-top: 19px;
+          min-height: 141px;
+        }
+        &::placeholder {
+          font-weight: 600;
+          font-size: 20px;
+          // line-height: 37px;
+          color: #8c8888;
+          @include max-lg {
+            font-size: 17px;
+          }
+          @include max-md {
+            font-size: 14px;
+          }
+        }
+      }
+      & button {
+        font-weight: 700;
+        font-size: 24px;
+        padding: 22px 83px;
+        color: #ffffff;
+        background: #0044f3;
+        border-radius: 10px;
+        margin-top: 94px;
+        display: block;
+        margin-left: auto;
+        @include max-xl {
+          margin-top: 50px;
+          font-size: 22px;
+        }
+        @include max-lg {
+          padding: 17px 35px;
+          font-size: 18px;
+          margin-top: 40px;
+        }
+        @include max-md {
+          padding: 7px 16px;
+          font-size: 15px;
+          margin-top: 30px;
+        }
+      }
+    }
+    &__info {
+      margin-top: 91px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include max-lg {
+        margin-top: 50px;
+      }
+      @include max-md {
+        margin-top: 16px;
+      }
+      &_group {
+        display: flex;
+        align-items: center;
+      }
+      &_author {
+        margin-left: 24px;
+        @include max-md {
+          margin-left: 7px;
+        }
+      }
+      &-avatar {
+        width: 84px;
+        @include max-lg {
+          width: 64px;
+        }
+        @include max-md {
+          width: 44px;
+        }
+      }
+      &_name {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: initial;
+        color: #fffcfc;
+        @include max-xl {
+          font-size: 22px;
+        }
+        @include max-lg {
+          font-size: 18px;
+        }
+        @include max-md {
+          font-size: 10px;
+          font-weight: 600;
+        }
+      }
+      &_rating {
+        padding-left: 4px;
+        margin-top: 5px;
+        @include max-md {
+          margin-top: 0;
+        }
+        & img {
+          width: 39px;
+          @include max-xl {
+            width: 20px;
+          }
+          @include max-lg {
+              width: 16px;
+          }
+          @include max-md {
+            width: 12px;
+          }
+        }
+      }
+      &_date {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: initial;
+        color: #ebe7e7;
+        @include max-lg {
+          font-size: 18px;
+        }
+        @include max-md {
+          font-weight: 400;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
