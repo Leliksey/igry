@@ -45,7 +45,7 @@
   //comment
   &-comment {
     max-width: 100%;
-    width: 92%;
+    width: 50%;
     padding: 66px 92px 231px;
     background: #97aee9;
     border-radius: 10px;
@@ -56,12 +56,20 @@
     right: 0;
     margin: auto;
     height: max-content;
+    max-height: 85%;
     transition: 0.5s;
+    @include max-xxl {
+      max-height: 75%;
+    }
     @include max-xl {
       padding: 50px 70px 100px;
+      width: 70%;
     }
     @include max-md {
       padding: 26px 28px 31px;
+    }
+    @include max-sm {
+      width: 95%;
     }
     transform: translateY(200%);
     &.active {
@@ -145,7 +153,11 @@
         margin-top: 94px;
         display: block;
         margin-left: auto;
-        @include max-xl {
+        // @include max-xxl {
+        //   margin-top: 50px;
+        //   font-size: 22px;
+        // }
+        @include max-xxl {
           margin-top: 50px;
           font-size: 22px;
         }
@@ -184,7 +196,7 @@
       }
       &-avatar {
         width: 84px;
-        @include max-lg {
+        @include max-xxl {
           width: 64px;
         }
         @include max-md {
@@ -196,7 +208,7 @@
         font-size: 24px;
         line-height: initial;
         color: #fffcfc;
-        @include max-xl {
+        @include max-xxl {
           font-size: 22px;
         }
         @include max-lg {
@@ -215,7 +227,7 @@
         }
         & img {
           width: 39px;
-          @include max-xl {
+          @include max-xxl {
             width: 20px;
           }
           @include max-lg {
@@ -231,7 +243,7 @@
         font-size: 24px;
         line-height: initial;
         color: #ebe7e7;
-        @include max-lg {
+        @include max-xxl {
           font-size: 18px;
         }
         @include max-md {

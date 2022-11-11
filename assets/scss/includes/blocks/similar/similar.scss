@@ -1,0 +1,89 @@
+.similar {
+    padding: 19px 65px 37px;
+    background: #fff;
+    border-radius: 15px;
+    margin-top: 21px;
+    @include max-xxl {
+        padding: 15px 50px 30px;
+    }
+    @include max-xxl {
+        padding: 15px 30px 20px;
+    }
+    @include max-md {
+        padding: 10px 10px 20px;
+    }
+    & .main__center-category__top {
+        justify-content: center;
+        column-gap: 17px;
+    }
+    & .category__name {
+        margin: auto;
+        @include max-md {
+            width: max-content;
+            padding: 10px 40px !important;
+            font-size: 14px;
+        }
+        @include max-sm {
+            padding: 7px 40px !important;
+        }
+    }
+    & picture {
+        display: none;
+        @include max-md {
+            display: block !important;
+        }
+        & img {
+            max-height: 39px;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        color: #ffffff;
+        padding: 0px 84px;
+        width: max-content;
+        border-radius: 15px;
+        margin: auto;
+        line-height: 53px;
+        @include max-md {
+            
+
+        }
+        @include max-sm {
+            font-size: 14px;
+            line-height: initial;
+            padding: 10px 84px;
+            padding: 10px 60px;
+        }
+    }
+    &__grid {
+    }
+    &__grid .main__center-category__games {
+        @include max-md {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include max-sm {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        // grid-template-columns: repeat(7, 1fr);
+    }
+    &__grid .main__center-category__game:nth-child(n+4) {
+        @include max-md {
+            display: block;
+        }
+        &img {
+        }
+    }
+
+    &__grid .main__center-category__game_name {
+    }
+}
+.adv__block {
+    margin-top: 21px;
+    @include max-md {
+        margin-top: 14px;
+    }
+}
+.main__center-category__top picture img {
+    vertical-align: bottom;
+}

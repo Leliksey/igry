@@ -1,0 +1,181 @@
+.productPage {
+    padding-bottom: 90px;
+    @include max-md {
+        padding-bottom: 14px;
+    }
+    @include max-sm {
+        padding-bottom: 4px;
+    }
+    & .main__center-category__top {
+        padding-top: 0;
+    }
+    & .main__center-category__top picture {
+        @include max-md {
+            display: none;
+        }
+    }
+    & .main__center-category__top .category__name {
+        @include max-md {
+            max-width: 100%;
+            margin: 0;
+            padding: 7px;
+        }
+    }
+    & .categoryPage__center-description {
+        margin-top: 23px;
+        text-align: left;
+        @include max-md {
+            margin-top: 13px;
+            text-align: center;
+        }
+    }
+    & .categoryPage__center.open {
+        display: block;
+         @include max-md {
+            padding: 12px 0 20px;
+         }
+         & .category__name {
+            width: max-content;
+            padding: 0 15px;
+            @include max-md {
+                padding: 7px 24px;
+                font-size: 14px;
+             }
+         }
+         & .categoryPage__center-description {
+            @include max-md {
+                display: block;
+                text-align: center;
+            }
+         }
+         & .main__center-category__top picture {
+            @include max-md {
+                display: block;
+                
+            }
+            & img {
+                max-height: 39px;
+            }
+        }
+        & .main__center-category__top {
+            @include max-md {
+                justify-content: center;
+                column-gap: 18px;
+                align-items: center;
+            }
+        }
+    }
+    & .categoryPage__center {
+        padding: 35px 85px 39px;
+        @include max-xxl {
+            padding: 25px 50px 30px;
+            margin-top: 20px;
+        }
+        @include max-lg {
+            padding: 15px 30px 20px;
+            margin-top: 10px;
+        }
+        @include max-md {
+            padding: 0;
+            margin-top: 10px;
+        }
+    }
+    & .advertise {
+        max-width: 1333px;
+        margin-top: 0;
+    }
+    &__categories {
+        display: none;
+        @include max-md {
+            display: block;
+        }
+        & .main__center-category__game:nth-child(n+4) {
+            display: block;
+           
+        }
+        & .categoryPage__center.close .main__center-category__game:nth-child(n+4) {
+            @include max-ip {
+                display: none;
+            }
+        }
+    }
+    &__slider {
+        max-width: 65vw;
+        margin-top: 17px;
+        @include max-lg {
+            max-width: 68vw;
+        }
+        @include max-md {
+            max-width: 95vw;
+        }
+        @include max-sm {
+            max-width: 92vw;
+        }
+        & .owl-stage-outer {
+            max-width: 1200px;
+        }
+        & .slick-list {
+            max-width: 1200px;
+        }
+        &-items {
+        }
+        &-item {
+            // max-width: 1200px;
+            // width: 100%;
+        }
+        &-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 18px;
+            @include max-lg {
+                margin-top: 10px;
+
+            }
+        }
+        &-rating {
+            & img {
+                max-width: 46px;
+                @include max-xl {
+                    max-width: 30px;
+                }
+                @include max-sm {
+                    max-width: 24px;
+                }
+            }
+        }
+        &-nav {
+            background: #ce59eb;
+            border-radius: 15px;
+            display: flex;
+            column-gap: 36px;
+            padding: 8px 19px;
+            @include max-md {
+                column-gap: 15px;
+             }
+            & img {
+                max-width: 44px;
+                @include max-xl {
+                    max-width: 30px;
+                }
+                @include max-sm {
+                    max-width: 19px;
+                }
+                cursor: pointer;
+                &:last-child {
+                    transform: rotateZ(180deg);
+                }
+            }
+        }
+    }
+    & .comment {
+        background: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        color: #000000;
+        @include max-md {
+            font-size: 12px;
+            background: #DB94E7;
+        }
+    }
+}
