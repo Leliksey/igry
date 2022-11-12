@@ -42,6 +42,11 @@ $(".comment").click(function() {
 })
 
 
+$(".categoryPage__center").click(function() {
+    $(".categoryPage").removeClass("active")
+})
+
+
 $(document).ready(function() {
     if ($(window).width() < 768) {
         

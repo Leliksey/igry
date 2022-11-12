@@ -249,6 +249,10 @@ html, body {
   }
   .content {
 	flex: 1 0 auto;
+	// padding-bottom: 33px;
+	@include max-md {
+		padding-bottom: 0;
+	}
   }
   .footer {
 	flex-shrink: 0;

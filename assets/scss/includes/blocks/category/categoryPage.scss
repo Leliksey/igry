@@ -8,7 +8,7 @@
     &__content {
         display: flex;
         column-gap: 57px;
-        margin-top: 26px;
+        padding-top: 26px;
         @include max-xxl {
             column-gap: 30px;
         }
@@ -16,10 +16,10 @@
             column-gap: 20px;
         }
         @include max-lg {
-            margin-top: 15px;
+            padding-top: 15px;
         }
         @include max-md {
-            margin-top: 0;
+            padding-top: 0;
         }
     }
     & aside {
@@ -286,7 +286,7 @@
     }
     & .main__center-category__top {
         @include max-md {
-            margin-top: 20px;
+            margin-top: 10px;
         }
         @include max-sm {
             margin-top: 10px;
